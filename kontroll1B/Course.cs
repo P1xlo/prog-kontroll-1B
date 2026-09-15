@@ -1,19 +1,24 @@
 
-class Course(String name)
+class Course(String name, int maxSeats)
 {
     String Name = name;
-    int MaxSeats;
-    List<Student> Students;
+    int MaxSeats = maxSeats;
+    List<Student>? Students;
 
 
     public void Entroll(Student student)
     {
-        if(!Students.Contains(student))
+        if(Students.Count <= MaxSeats)
         {
-            Students.Add(student);
+            if(!Students.Contains(student))
+            {
+                Students.Add(student);
+            }
+            else
+                Console.WriteLine($"{student.Name} finns redan i krusen");
         }
         else
-            Console.WriteLine($"{student.Name} finns redan i krusen");
+            Console.WriteLine("Kursen är full");
     }
     
     public void Remove(Student student)
@@ -29,7 +34,10 @@ class Course(String name)
 
     public void RollCall()
     {
-        
+        for(int i = 0; i < Students.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {Students.ElementAt(i)}");
+        }
     }
 
     public override string ToString()
