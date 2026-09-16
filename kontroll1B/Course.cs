@@ -1,12 +1,12 @@
 
 class Course(String name, int maxSeats)
 {
-    String Name = name;
+    public String Name = name;
     int MaxSeats = maxSeats;
     List<Student>? Students;
 
 
-    public void Entroll(Student student)
+    public void Enroll(Student student)
     {
         if(Students.Count <= MaxSeats)
         {
