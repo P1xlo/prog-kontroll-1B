@@ -3,7 +3,7 @@ class Course(String name, int maxSeats)
 {
     public String Name = name;
     int MaxSeats = maxSeats;
-    List<Student>? Students = new List<Student>();
+    public List<Student> Students = new List<Student>();
 
 
     public void Enroll(Student student)
@@ -13,6 +13,7 @@ class Course(String name, int maxSeats)
             if(!Students.Contains(student))
             {
                 Students.Add(student);
+                student.courses.Add(this);
             }
             else
                 Console.WriteLine($"{student.Name} finns redan i krusen");
@@ -26,6 +27,7 @@ class Course(String name, int maxSeats)
         if(Students.Contains(student))
         {
             Students.Remove(student);
+            student.courses.Remove(this);
             Console.WriteLine($"Studenten {student.Name} har blivit bortagen från kursen");
         }
         else

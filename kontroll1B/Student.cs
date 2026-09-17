@@ -1,7 +1,7 @@
 class Student(string name)
 {
     public String Name = name;
-    List<Course> courses = new List<Course>();
+    public List<Course> courses = new List<Course>();
 
     public void JoinCourse(Course course)
     {
@@ -28,7 +28,7 @@ class Student(string name)
         Console.WriteLine("Schema");
         foreach(Course c in courses)
         {
-            Console.WriteLine(c);
+            Console.WriteLine(c.Name);
         }
     }
 
