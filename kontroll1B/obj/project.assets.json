@@ -8,23 +8,26 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\isac\\.nuget\\packages\\": {}
+    "C:\\Users\\Isac\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\isac\\Documents\\school\\prog-kontroll-1b\\prog-kontroll-1B\\kontroll1B\\kontroll1B.csproj",
+      "projectUniqueName": "C:\\Users\\Isac\\Documents\\school\\prog-kontroll-1B\\kontroll1B\\kontroll1B.csproj",
       "projectName": "kontroll1B",
-      "projectPath": "C:\\Users\\isac\\Documents\\school\\prog-kontroll-1b\\prog-kontroll-1B\\kontroll1B\\kontroll1B.csproj",
-      "packagesPath": "C:\\Users\\isac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\isac\\Documents\\school\\prog-kontroll-1b\\prog-kontroll-1B\\kontroll1B\\obj\\",
+      "projectPath": "C:\\Users\\Isac\\Documents\\school\\prog-kontroll-1B\\kontroll1B\\kontroll1B.csproj",
+      "packagesPath": "C:\\Users\\Isac\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Isac\\Documents\\school\\prog-kontroll-1B\\kontroll1B\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\isac\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Isac\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net10.0": {
           "framework": "net10.0",
@@ -64,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
