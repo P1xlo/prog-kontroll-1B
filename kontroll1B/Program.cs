@@ -7,6 +7,7 @@ while(on)
 {
     Console.Clear();
     Console.WriteLine("Skriv in antingen Student eller Kurs för vad du vill göra");
+    Console.WriteLine("Eller skriv Stop för att stänga ner");
     string? ans = Console.ReadLine();
     switch(ans)
     {
@@ -48,6 +49,10 @@ while(on)
                 break;
             fCourse(i);
 
+            break;
+        case "stop":
+        case "Stop":
+            on = false;
             break;
         default:
 
@@ -118,7 +123,7 @@ void fStudent(int s)
 
         break;
     }
-    Console.WriteLine("Tryck på valfri knapp för att fortsätta");
+    Console.WriteLine("Tryck på retur för att fortsätta");
     Console.ReadLine();
 }
 
@@ -200,6 +205,6 @@ void fCourse(int c)
 
         break;
     }
-    Console.WriteLine("Tryck på valfri knapp för att fortsätta");
+    Console.WriteLine("Tryck på retur för att fortsätta");
     Console.ReadLine();
 }

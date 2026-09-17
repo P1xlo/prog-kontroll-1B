@@ -8,7 +8,7 @@ class Course(String name, int maxSeats)
 
     public void Enroll(Student student)
     {
-        if(Students.Count <= MaxSeats)
+        if(Students.Count < MaxSeats)
         {
             if(!Students.Contains(student))
             {
