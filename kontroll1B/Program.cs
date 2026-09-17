@@ -83,7 +83,6 @@ void fStudent(int s)
         if(_s != null && _c != null)
         {
             _s.JoinCourse(_c);
-            Console.WriteLine($"{_s.Name} gick med i kursen {_c.Name}");
         }
         else
             Console.WriteLine("Studenten eller kursen hittades inte");
@@ -102,7 +101,6 @@ void fStudent(int s)
         if(_s != null && _c != null)
         {
             _s.LeaveCourse(_c);
-            Console.WriteLine($"{_s.Name} lämnade kursen {_c.Name}");
         }
         else
             Console.WriteLine("Studenten eller kursen hittades inte");
@@ -120,40 +118,88 @@ void fStudent(int s)
 
         break;
     }
-    Console.WriteLine("Tryck på retur för att fortsätta");
+    Console.WriteLine("Tryck på valfri knapp för att fortsätta");
     Console.ReadLine();
 }
 
 void fCourse(int c)
 {
+    string? sName;
+    string? cName;
+    Student _s;
+    Course _c;
     switch(i)
     {
         case 1://ny kurs
         Console.WriteLine("Skriv namnet på kursen du vill skapa");
-        string kN = Console.ReadLine();
+        string cN = Console.ReadLine();
         Console.WriteLine("Antal max platser");
         while(!int.TryParse(Console.ReadLine(), out q))
         {
             Console.WriteLine("Skiv ett nummer");
         }
-        courses.Add(new Course(kN,q));
+        courses.Add(new Course(cN,q));
         
 
         break;
         case 2:// lägga till student i kurs
+        Console.WriteLine("Kursens namn: ");
+        cName = Console.ReadLine();
+
+        Console.WriteLine("Studentens namn: ");
+        sName = Console.ReadLine();
+
+        _s = students.Find(s => s.Name == sName);
+        _c = courses.Find(c => c.Name == cName);
+
+        if(_s != null && _c != null)
+        {
+            _c.Enroll(_s);
+        }
+        else
+            Console.WriteLine("Studenten eller kursen hittades inte");
 
         break;
         case 3: // ta bort student ifrån kurs
+        Console.WriteLine("Kursens namn: ");
+        cName = Console.ReadLine();
+
+        Console.WriteLine("Studentens namn: ");
+        sName = Console.ReadLine();
+
+        _s = students.Find(s => s.Name == sName);
+        _c = courses.Find(c => c.Name == cName);
+
+        if(_s != null && _c != null)
+        {
+            _c.Remove(_s);
+        }
+        else
+            Console.WriteLine("Studenten eller kursen hittades inte");
 
         break;
         case 4: // studenter i en kurs
+        Console.WriteLine("Kursens namn: ");
+        cName = Console.ReadLine();
+        _c = courses.Find(c => c.Name == cName);
+        if(_c != null)
+            _c.RollCall();
+        else
+            Console.WriteLine("Kunde inte hitta en student med det namnet");
 
         break;
         case 5: // antal plater / max antal platser i en kurs
+        Console.WriteLine("Kursens namn: ");
+        cName = Console.ReadLine();
+        _c = courses.Find(c => c.Name == cName);
+        if(_c != null)
+            Console.WriteLine(_c.ToString());
+        else
+            Console.WriteLine("Kunde inte hitta en student med det namnet");
 
 
         break;
     }
-    Console.WriteLine("Tryck på retur för att fortsätta");
+    Console.WriteLine("Tryck på valfri knapp för att fortsätta");
     Console.ReadLine();
 }

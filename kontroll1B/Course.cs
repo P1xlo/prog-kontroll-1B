@@ -14,6 +14,7 @@ class Course(String name, int maxSeats)
             {
                 Students.Add(student);
                 student.courses.Add(this);
+                Console.WriteLine($"{student.Name} gick med i kursen {Name}");
             }
             else
                 Console.WriteLine($"{student.Name} finns redan i krusen");
