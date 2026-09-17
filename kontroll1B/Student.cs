@@ -1,7 +1,7 @@
 class Student(string name)
 {
     public String Name = name;
-    List<Course> courses;
+    List<Course> courses = new List<Course>();
 
     public void JoinCourse(Course course)
     {

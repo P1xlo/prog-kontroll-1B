@@ -3,7 +3,7 @@ class Course(String name, int maxSeats)
 {
     public String Name = name;
     int MaxSeats = maxSeats;
-    List<Student>? Students;
+    List<Student>? Students = new List<Student>();
 
 
     public void Enroll(Student student)
